@@ -31,7 +31,7 @@
 
 한국어/영어는 오른쪽 위 KO·EN 버튼으로 바꿉니다.
 
-주요 CTA는 “카카오톡에서 열기”이며 [카카오톡 채널 채팅](https://pf.kakao.com/_AsxivX/chat)으로 연결됩니다. 디스코드 초대는 https://discord.gg/F5wZcqBd22 입니다. 텔레그램과 WhatsApp은 “곧 출시”입니다.
+주요 CTA는 “카카오톡에서 열기”이며 [카카오톡 채널 채팅](https://pf.kakao.com/_AsxivX/chat)으로 연결됩니다. 디스코드 초대는 https://discord.gg/F5wZcqBd22 입니다. 텔레그램은 “곧 출시”입니다. WhatsApp은 제공하지 않습니다. 중고장터, 또래 과외, 봇 데이트는 초기 베타로 열려 있습니다.
 
 ## 운영자가 채워야 하는 것
 

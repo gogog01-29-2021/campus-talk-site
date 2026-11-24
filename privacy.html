@@ -85,18 +85,19 @@
         <li>할 일, 과제, 커넥트(스터디) 카드. 연락처는 서로 승인한 뒤에만 상대에게 보여집니다.</li>
         <li>e-class 연결 코드는 원문이 아니라 해시로 보관합니다. 서버가 이용자 대신 e-class에 로그인하지 않습니다.</li>
         <li>처리가 끝난 채팅 메시지는 남기지 않도록 되어 있습니다.</li>
-        <li>봇 데이트 기능은 기본값으로 꺼져 있습니다. 운영자가 나중에 켜면 데이트 프로필·선호 정보가 추가로 처리될 수 있습니다.</li>
-        <li>과외 매칭과 중고장터는 만들고 있으며 아직 일반에 열려 있지 않습니다. 열리면 게시글, 거래·매칭에 필요한 정보가 추가로 처리될 수 있습니다.</li>
+        <li>중고장터와 또래 과외(베타): 게시글(제목, 본문, 가격, 상태, 과목·ISBN, 만날 장소 등), 판매 사진, 대화와 거래·과외 제안, 과외 프로필·요청, 후기, 신고·차단 기록. 사진은 Supabase Storage의 campus-market 버킷에 저장될 수 있습니다. 게스트도 공개 글을 둘러볼 수 있으며, 글을 올리거나 연락하려면 학교 메일 인증과 만 19세 이상이 필요합니다.</li>
+        <li>봇 데이트(베타): 만 19세 이상 자기 확인과 참여 동의 시각, 한 줄 소개, 관심사, 가능 시간, 수강 과목, 서로 승인한 뒤에만 열리는 연락 방법, 신고·차단 기록. 데이트용 사진은 받지 않습니다.</li>
       </ul>
       <h2>3. 이용 목적</h2>
       <ul>
         <li>시간표·일정·오늘 할 일·공지·공모전을 보여 주기 위해</li>
+        <li>중고장터, 또래 과외, 봇 데이트(베타)를 제공하고 신고·차단에 대응하기 위해</li>
         <li>학교 메일로 이용자를 확인하고 채널 계정을 하나로 묶기 위해</li>
         <li>여러분이 요청한 알림이나 캘린더 구독을 제공하기 위해</li>
         <li>문의 대응, 오류 수정, 서비스 운영을 위해</li>
       </ul>
       <h2>4. 보관 장소와 기간</h2>
-      <p>설정에 따라 운영 서버의 파일 저장소 또는 대한민국 서울 리전의 데이터베이스에 보관될 수 있습니다. 계정 삭제 요청이 처리되거나, 서비스를 종료할 때까지 이용 목적에 필요한 범위에서 보관합니다. 법령상 보관이 필요한 경우는 그 기간을 따릅니다. 카카오톡·디스코드에 남는 대화는 각 플랫폼의 보관 정책을 따릅니다.</p>
+      <p>설정에 따라 운영 서버의 파일 저장소 또는 대한민국 서울 리전의 데이터베이스에 보관될 수 있습니다. 중고장터 사진은 Supabase Storage의 campus-market 버킷에 저장될 수 있습니다. 계정 삭제 요청이 처리되거나, 서비스를 종료할 때까지 이용 목적에 필요한 범위에서 보관합니다. 법령상 보관이 필요한 경우는 그 기간을 따릅니다. 카카오톡·디스코드에 남는 대화는 각 플랫폼의 보관 정책을 따릅니다.</p>
       <h2>5. 제3자 제공과 처리 위탁</h2>
       <p>이용자가 선택한 채널(카카오톡, 디스코드 등)으로 메시지를 주고받기 위해 해당 플랫폼이 계정 식별자와 대화 내용을 처리합니다. 인프라 제공자(호스팅, 데이터베이스, 터널)가 운영에 필요한 범위에서 데이터를 처리할 수 있습니다. 판매 목적으로 개인정보를 넘기지 않습니다. 이 소개 사이트는 GitHub Pages에서 호스팅됩니다.</p>
       <h2>6. 이용자의 권리</h2>
@@ -104,7 +105,7 @@
       <h2>7. 이 소개 사이트에서 쓰는 정보</h2>
       <p>언어 선택(한국어/영어)은 브라우저의 로컬 저장소에만 남습니다. 필수 쿠키를 마케팅에 쓰지 않습니다. 웹 앱 주소는 별도의 도메인일 수 있으며, 그 도메인의 로그인 정보는 이 소개 사이트와 공유되지 않습니다.</p>
       <h2>8. 변경</h2>
-      <p>기능이 바뀌거나(예: 중고장터·과외·데이트 공개, 텔레그램 연결) 보관 방식이 바뀌면 이 문서를 고치고 날짜를 갱신합니다.</p>
+      <p>기능이 바뀌거나(예: 텔레그램 연결) 보관 방식이 바뀌면 이 문서를 고치고 날짜를 갱신합니다.</p>
     </div>
     <div data-lang="en" hidden>
       <p>This policy applies to the Campus Talk service, including this marketing site, the web app, and connected channels such as KakaoTalk and Discord. Last updated: 24 November 2026.</p>
@@ -122,18 +123,19 @@
         <li>To-dos, assignments, and Connect (study-partner) cards. Contact details are shown to the other person only after both approve.</li>
         <li>e-class link codes are stored as hashes, not in plain text. Our server does not log in to e-class on your behalf.</li>
         <li>Chat messages are not kept after they have been handled.</li>
-        <li>The dating feature is off by default. If an operator later enables it, dating profile and preference data may also be processed.</li>
-        <li>Tutoring and the campus marketplace are being built and are not generally available. When they launch, listing or matching data may also be processed.</li>
+        <li>Campus marketplace and peer tutoring (beta): listings (title, body, price, condition, course or ISBN, meetup zone, and similar fields), listing photos, chats and offers, tutor profiles and requests, reviews, and reports or blocks. Photos may be stored in the Supabase Storage bucket campus-market. Guests can browse public listings. Posting or contacting someone requires a verified school email and being 19 or older.</li>
+        <li>Bot date (beta): 19+ self-attestation and consent timestamps, a one-line intro, interests, availability, courses, the contact method that is revealed only after both people approve, and reports or blocks. We do not collect dating photos.</li>
       </ul>
       <h2>3. Purpose</h2>
       <ul>
         <li>To show your timetable, calendar, today’s tasks, notices, and contests</li>
+        <li>To provide the campus marketplace, peer tutoring, and Bot date (beta), and to handle reports or blocks</li>
         <li>To verify you with a school email and link chat accounts to one user</li>
         <li>To provide reminders or calendar subscription you asked for</li>
         <li>To answer questions, fix errors, and operate the service</li>
       </ul>
       <h2>4. Storage and period</h2>
-      <p>Depending on the setup, data may be kept in files on the operations server or in a database in the Seoul, Korea region. We keep it for as long as needed for these purposes, until a deletion request is completed or the service ends, or for any longer period required by law. Messages that remain in KakaoTalk or Discord follow those platforms’ retention rules.</p>
+      <p>Depending on the setup, data may be kept in files on the operations server or in a database in the Seoul, Korea region. Marketplace photos may be stored in the Supabase Storage bucket campus-market. We keep it for as long as needed for these purposes, until a deletion request is completed or the service ends, or for any longer period required by law. Messages that remain in KakaoTalk or Discord follow those platforms’ retention rules.</p>
       <h2>5. Third parties and processors</h2>
       <p>The chat platform you choose (such as KakaoTalk or Discord) processes account identifiers and messages so the conversation can be delivered. Infrastructure providers (hosting, database, tunnel) may process data as needed to run the service. We do not sell personal information. This marketing site is hosted on GitHub Pages.</p>
       <h2>6. Your rights</h2>
@@ -141,7 +143,7 @@
       <h2>7. This marketing site</h2>
       <p>Your language choice (Korean/English) is stored only in your browser’s local storage. We do not use marketing cookies. The web app may live on a different hostname, and its sign-in data is not shared with this site.</p>
       <h2>8. Changes</h2>
-      <p>If features change (for example, marketplace, tutoring, or dating going live, or Telegram connecting) or storage changes, we will update this document and the date.</p>
+      <p>If features change (for example, Telegram connecting) or storage changes, we will update this document and the date.</p>
     </div>
   </section>
 
