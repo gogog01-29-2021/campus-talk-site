@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gogog01-29-2021.github.io/campus-talk-site/sitemap.xml
+Sitemap: https://zavis.chat/campus-talk-site/sitemap.xml

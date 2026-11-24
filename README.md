@@ -2,7 +2,7 @@
 
 서울과학기술대학교 학생을 위한 캠퍼스톡(Campus Talk) 공개 소개 사이트입니다. 대학 공식 앱이 아닙니다.
 
-라이브 주소: https://gogog01-29-2021.github.io/campus-talk-site/
+라이브 주소: https://zavis.chat/campus-talk-site/
 
 이 저장소는 정적 HTML만 담고 있습니다. GitHub Pages(무료)의 `main` 브랜치 루트에서 호스팅합니다.
 

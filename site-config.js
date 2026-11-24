@@ -16,7 +16,7 @@ window.CAMPUS_TALK_CONFIG = {
   KAKAO_CHAT_URL: "https://pf.kakao.com/_AsxivX/chat",
   KAKAO_HOME_URL: "https://pf.kakao.com/_AsxivX",
   DISCORD_INVITE_URL: "https://discord.gg/F5wZcqBd22",
-  SITE_CANONICAL_ORIGIN: "https://gogog01-29-2021.github.io",
+  SITE_CANONICAL_ORIGIN: "https://zavis.chat",
   SITE_BASE_PATH: "/campus-talk-site/",
   /* TODO(user): put a public contact email here, then remove this comment.
      Leave empty to show the on-page placeholder instead. */
