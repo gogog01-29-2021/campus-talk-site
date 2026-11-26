@@ -16,6 +16,12 @@
 
 메인 버튼(“웹 앱 / 데모 열기”)은 ngrok 주소를 바로 열지 않고 [`open-web.html`](open-web.html)로 갑니다. 그 페이지가 처음 한 번 나오는 ngrok “Visit Site” 안내를 설명한 뒤, `APP_URL`로 이어지는 버튼을 보여 줍니다. `APP_URL`에 `ngrok`이 더 이상 없으면 그 안내는 자동으로 숨깁니다.
 
+## 카카오톡 데모 클립
+
+홈과 International 페이지의 “카카오톡에서 이렇게 물어보세요” 섹션은 `assets/demo/`의 짧은 클립을 보여 줍니다. 언어 버튼에 따라 한국어·영어 클립이 바뀝니다. 각 장면은 GIF와 더 작은 MP4(`<video autoplay muted loop playsinline>`)를 함께 둡니다.
+
+원본 데모 영상에서 핵심 장면만 잘라 만들었고, 메시지 사이 대기 시간은 뺐습니다.
+
 ## 페이지
 
 - `index.html` — 홈
