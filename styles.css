@@ -113,7 +113,13 @@ a:focus-visible, button:focus-visible {
   background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
   overflow: hidden; box-shadow: var(--shadow);
 }
-.shot img { width: 100%; background: #fff; }
+.shot img, .shot video { width: 100%; height: auto; display: block; background: #d3dee6; }
+.shot .demo-still { display: none; }
+.demo-note { color: var(--muted); font-size: 0.9rem; margin: 14px 0 0; }
+@media (prefers-reduced-motion: reduce) {
+  .shot-demo .demo-anim { display: none; }
+  .shot-demo .demo-still { display: block; }
+}
 .shot figcaption { padding: 10px 14px 14px; color: var(--muted); font-size: 0.9rem; }
 .steps { display: grid; gap: 16px; counter-reset: step; }
 .steps article { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; }

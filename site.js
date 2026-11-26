@@ -14,6 +14,13 @@
       capCalendar: "수업과 학사일정이 함께 보이는 주간 달력",
       capToday: "오늘 일정과 공지, 공모전을 모은 화면",
       capBrief: "아침 브리핑 예시 (데모 계정)",
+      kakaoDemoTitle: "카카오톡에서 이렇게 물어보세요",
+      kakaoDemoLead: "캠퍼스톡 채널에 짧게 보내면 챗봇이 바로 답해요. 실제 카카오톡 화면을 핵심만 잘라 만든 데모입니다.",
+      kakaoDemoNote: "PC로 녹화한 화면이라 이모지가 작은 네모로 보일 수 있어요. 휴대폰 카카오톡에서는 정상으로 보여요.",
+      capKakaoWeek: "「이번 주」라고 보내면 학사일정을 보여 줘요",
+      capKakaoAsgn: "「과제」라고 보내면 마감을 확인해요",
+      capKakaoMarket: "「장터」라고 보내면 중고장터 안내를 보여 줘요",
+      capKakaoDate: "「데이트」라고 보내면 봇 데이트 시작 방법을 안내해요",
       howTitle: "이렇게 쓰면 돼요",
       how1T: "1. 시간표 사진을 올려 확인해요",
       how1B: "주간 시간표 사진을 올리면 수업 시간과 강의실을 읽어요. 확인한 뒤에만 저장돼요. 테스트 사진 5장에서는 칸 정보 52/60개(약 87%)를 맞게 읽었습니다. 항상 그 비율이 나온다고 보장하지는 않아요.",
@@ -104,6 +111,13 @@
       capCalendar: "A weekly calendar with classes and academic dates",
       capToday: "Today’s classes, notices, and contests on one screen",
       capBrief: "Morning briefing sample (demo account)",
+      kakaoDemoTitle: "Ask in KakaoTalk like this",
+      kakaoDemoLead: "Send a short message in the Campus Talk channel and the bot replies. These clips are cut from a real KakaoTalk chat.",
+      kakaoDemoNote: "Emoji may appear as small boxes in this PC recording. They display normally in the KakaoTalk mobile app.",
+      capKakaoWeek: "Type “this week” to see academic dates",
+      capKakaoAsgn: "Type “assignments” to check deadlines",
+      capKakaoMarket: "Type “market” for the campus marketplace",
+      capKakaoDate: "Type “dating” to see how Bot date starts",
       howTitle: "How it works",
       how1T: "1. Upload a timetable photo and confirm",
       how1B: "We read class times and rooms from a weekly timetable photo. Nothing is saved until you confirm. On five test photos we correctly read 52 of 60 cells (about 87%). That is not a guarantee for every photo.",
@@ -245,6 +259,16 @@
     });
     document.querySelectorAll("[data-lang]").forEach((el) => {
       el.hidden = el.getAttribute("data-lang") !== lang;
+    });
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    document.querySelectorAll(".shot-demo video").forEach((video) => {
+      const wrap = video.closest("[data-lang]");
+      const visible = !wrap || wrap.getAttribute("data-lang") === lang;
+      if (visible && !reduceMotion) {
+        video.play().catch(() => { /* autoplay may be blocked */ });
+      } else {
+        video.pause();
+      }
     });
     const titleKey = document.body.dataset.titleKey;
     if (titleKey && pack[titleKey]) document.title = pack[titleKey] + " · Campus Talk";
